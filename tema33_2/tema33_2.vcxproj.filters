@@ -30,6 +30,9 @@
     <ClCompile Include="MinutesTariff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MobileException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tariff.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MinutesTariff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MobileException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

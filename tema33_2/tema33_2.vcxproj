@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MinutesTariff.cpp" />
+    <ClCompile Include="MobileException.cpp" />
     <ClCompile Include="MobileProvider.cpp" />
     <ClCompile Include="SecondsTariff.cpp" />
     <ClCompile Include="Tariff.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MinutesTariff.h" />
+    <ClInclude Include="MobileException.h" />
     <ClInclude Include="MobileProvider.h" />
     <ClInclude Include="SecondsTariff.h" />
     <ClInclude Include="Tariff.h" />
