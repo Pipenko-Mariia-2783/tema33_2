@@ -15,6 +15,11 @@ string MobileProvider::getName() const
     return name;
 }
 
+Tariff* MobileProvider::operator[](int index) const
+{
+    return tariffs[index];
+}
+
 void MobileProvider::addTariff(Tariff* obj)
 {
     tariffs.push_back(obj);

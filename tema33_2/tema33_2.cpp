@@ -40,7 +40,10 @@ int main()
         case 4:
             cout << "Input number of tariff: ";
             cin >> id;
-
+            cout << "Input how many seconds did you talk: ";
+            cin >> seconds;
+            cout << "Total price: " << Kyivstar[id]->calcCost(seconds) << endl;
+            break;
         }
     } while (menu != 0);
 }

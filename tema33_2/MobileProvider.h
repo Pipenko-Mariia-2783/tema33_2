@@ -16,6 +16,8 @@ public:
 	void setName(string name);
 	string getName()const;
 
+	Tariff* operator [](int index)const;
+
 	void addTariff(Tariff* obj);
 	void showList()const;
 };
