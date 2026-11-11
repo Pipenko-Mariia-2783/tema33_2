@@ -17,6 +17,9 @@ string MobileProvider::getName() const
 
 Tariff* MobileProvider::operator[](int index) const
 {
+    if (tariffs.size()<=index && index < 0) {
+        throw IdException("Invaild id!", index);
+    }
     return tariffs[index];
 }
 

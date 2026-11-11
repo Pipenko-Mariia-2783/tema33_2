@@ -37,3 +37,14 @@ string PriceException::showMessage() const
 {
 	return "Price Exception: " + text + "! Price: " + std::to_string(price);
 }
+
+IdException::IdException(string text, int id)
+	:MobileException(text)
+{
+	this->id = id;
+}
+
+string IdException::showMessage() const
+{
+	return "Id Exception: " + text + "! Id: " + std::to_string(id);;
+}

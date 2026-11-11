@@ -37,3 +37,10 @@ public:
 	PriceException(string text, float price);
 	string showMessage()const override;
 };
+class IdException :public MobileException {
+protected:
+	int id;
+public:
+	IdException(string text, int id);
+	string showMessage()const override;
+};
