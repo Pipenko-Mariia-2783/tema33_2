@@ -26,23 +26,39 @@ int main()
             getline(cin, name);
             cout << "Input price for 1 minute: ";
             cin >> price;
-            p = new MinutesTariff(name, price);
-            Kyivstar.addTariff(p);
+            try {
+                p = new MinutesTariff(name, price);
+                Kyivstar.addTariff(p);
+            }
+            catch (MobileException& Error) {
+                cout << Error.showMessage() << endl;
+            }
             break;
         case 3:cout << "Input name: ";
             cin.ignore();
             getline(cin, name);
             cout << "Input price for 1 second: ";
             cin >> price;
+            try {
             p = new SecondsTariff(name, price);
             Kyivstar.addTariff(p);
+            }
+            catch (MobileException& Error) {
+                cout << Error.showMessage() << endl;
+            }
+            
             break;
         case 4:
             cout << "Input number of tariff: ";
             cin >> id;
             cout << "Input how many seconds did you talk: ";
             cin >> seconds;
+            try {
             cout << "Total price: " << Kyivstar[id]->calcCost(seconds) << endl;
+            }
+            catch (MobileException& Error) {
+                cout << Error.showMessage() << endl;
+            }
             break;
         }
     } while (menu != 0);

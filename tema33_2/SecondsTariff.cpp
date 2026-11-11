@@ -9,11 +9,17 @@ SecondsTariff::SecondsTariff()
 
 SecondsTariff::SecondsTariff(std::string name, float price) :Tariff(name)
 {
+    if (price <= 0) {
+        throw PriceException("Invaild price!", price);
+    }
     this->price = price;
 }
 
 void SecondsTariff::setPrice(float price)
 {
+    if (price <= 0) {
+        throw PriceException("Invaild price!", price);
+    }
     this->price = price;
 }
 
@@ -24,6 +30,9 @@ float SecondsTariff::getPrice() const
 
 float SecondsTariff::calcCost(int seconds) const
 {
+    if (seconds <= 0) {
+        throw SecondsException("Invaild seconds!", seconds);
+    }
     return price * seconds;
 }
 
